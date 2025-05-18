@@ -3,9 +3,8 @@ import numpy as np
 def square(value_func, left_border, right_border):
     return value_func * (right_border - left_border)
 
-def part_x(a, b, e):
-    prec = get_max_precision([a, b, e])
-    x = [round(float(i), prec) for i in np.arange(a, b, e)]
+def part_x(a, b, n):
+    x = [float(i) for i in np.arange(a, b, (b - a) / n)]
     x.append(b)
     return x
 
