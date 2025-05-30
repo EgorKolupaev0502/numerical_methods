@@ -77,7 +77,7 @@ def main():
     # beta = float(input("Введите β (конец отрезка по μ): "))
     # epsilon = float(input("Введите точность ε: "))
     a = -2
-    b = 2
+    b = 10
     alpha = -4
     beta = 1
     epsilon = 0.01
@@ -96,10 +96,10 @@ def main():
     #     return 2 * x - (2 * mu + 2)
 
     def f(x, mu):
-        return x**2 + mu
+        return x**3 + x * mu -1
 
     def df(x, mu):
-        return 2 * x
+        return 3 * x + mu
 
     # Нахождение решений для каждого μ
     mu_values = np.arange(alpha, beta + mu_step, mu_step)
